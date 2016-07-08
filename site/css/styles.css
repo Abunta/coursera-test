@@ -2,7 +2,71 @@
 *{
 	box-sizing: border-box;
 }
-p{
-	color: blue;
+
+h1{
+	text-align: center;
+	margin-bottom: 30px;
 }
+.p1,.p2,.p3{
+	position: absolute;
+	width: 50px;
+	height: 10px;
+	text-align: center;
+	padding-top: 5px;
+	top:0;
+	right:0;
+}
+.p1{
+	background-color: #D45E64;
+	color: #CAF5BC;
+}
+.p2{
+	background-color: #3C7C48;
+}
+.p3{
+	background-color: #2C3D68;
+}
+
+ div > p{
+	border: solid black 2px;
+	background-color: gray; 
+	color: white;
+	font-style: italic;
+	margin-top: 0px;
+	margin-right: 10px;
+	margin-left: 10px;
+	padding: 30px 10px 10px 10px;
+	text-align: center;
+
+}
+.row{
+	width: 100%
+}
+div{
+	position: relative;
+}
+@media (min-width: 992px){
+	.col-lg-4 {
+		float: left;
+		width: 33.33%;
+		text-align: 33%;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px){
+	.col-md-6, .col-md-12{
+		float:left;
+	}
+	.col-md-6{
+		width: 50%;
+	}
+	.col-md-12{
+		width: 100%;
+	}
+}
+@media (max-width: 767px){
+	.col-sm-12{
+		float:left;
+		width: 100%;
+}
+
 </style>
