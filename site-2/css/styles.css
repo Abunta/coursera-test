@@ -2,6 +2,7 @@ body{
 	font-size: 20px;
 	color: black;
 	background-color: #808080;
+	padding-top: 80px;
 }
 /* HEADER */
 #header-nav{
@@ -42,7 +43,7 @@ body{
 }
 
 .navbar-header button.navbar-toggle{
-	clear: both;
+	/*clear: both*/margin-bottom: 20px;
 }
 #collapsible-nav{
 	border-top: 1px solid #008B8B;
