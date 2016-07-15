@@ -55,9 +55,25 @@ body{
 	font-weight: bold;
 	margin-top: 0;
 }
-
-#main-content.container p{
+#main-content.container #main-text{
 	background-color: #A9A9A9;
-	padding: 20px;
-	margin: auto 10px 10px 10px;
+	/*margin: 0px 10px 10px 10px;*/
 }
+/*#main-content.container p{
+	padding: 10px;
+	/*margin: 0px 30px 10px 0px;
+}*/
+.row {
+	margin-right: 20px;
+	margin-left: 20px;
+}
+#main-content.container h3{
+	margin-top: 5px;
+}
+/*@media (max-width: 767px) {
+	#main-content.container #main-text{
+	background-color: #A9A9A9;
+	width: 100%;
+	padding: 0px;
+	width: 90%;
+}*/
