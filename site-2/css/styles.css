@@ -24,8 +24,14 @@ body{
 .navbar-brand a:hover, .navbar-brand a:focus{
 	text-decoration: none;
 }
-.navbar-header{
 
+#nav-list li:nth-child(1){
+	border-top: 2px solid #A52A2A;
+	border-bottom: 2px solid #A52A2A;
+}
+#nav-list li:nth-child(3){
+	border-top: 2px solid #A52A2A;
+	border-bottom: 2px solid #A52A2A;
 }
 #nav-list{
 	background:  #5F9EA0;
