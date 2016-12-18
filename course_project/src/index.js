@@ -9,6 +9,9 @@ var markers= [];
 var  pictures=[];
 var contentString=[];
 var infowindow=[];
+var title=[];
+var str1=[];
+
 
 function search(){
     var text = document.getElementById("inField").value;
@@ -16,7 +19,7 @@ function search(){
 }
 
 function showMarker(searchText){
-    for(var i = 0; i<4; i++){
+    for(var i = 0; i<5; i++){
 
         infowindow[i].close();
         if(markers[i].title==searchText){
@@ -30,47 +33,52 @@ function initMap() {
 
 
     map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 57.0442, lng: 9.9116},
-        zoom: 6
+        center: {lat: 53.90570183, lng: 27.55590364},
+        zoom: 12
     });
-    positions[0] = new google.maps.LatLng(57.0442, 9.9116);
-    positions[1] = new google.maps.LatLng(58.0442, 10.9116);
-    positions[2] = new google.maps.LatLng(59.0442, 9.9116);
-    positions[3] = new google.maps.LatLng(56.0442, 11.9116);
+    positions[0] = new google.maps.LatLng(53.90854123, 27.57483333);
+    positions[1] = new google.maps.LatLng(53.90570183, 27.55590364);
+    positions[2] = new google.maps.LatLng(53.91185915, 27.55084634);
+    positions[3] = new google.maps.LatLng(53.936161, 27.4819987);
+    positions[4] = new google.maps.LatLng(53.89184336, 27.5517717);
 
-    pictures[0] = '<img src="kotomatrix_10.jpg" height="200px">';
-    pictures[1] = '<img src="kotiki-simpatichnye-zabavnye-kartinki-koshki-sobaki-smeshnye-zhivotnye-kote_676581157.jpg" height="200px">';
-    pictures[2] = '<img src="maxresdefault (1).jpg" height="200px">';
-    pictures[3] = '<img src="maxresdefault.jpg" height="200px">';
+    pictures[0] = '<img src="square.jpg" height="300px">';
+    pictures[1] = '<img src="church.png" height="300px">';
+    pictures[2] = '<img src="nemiga.jpeg" height="300px">';
+    pictures[3] = '<img src="arena.jpg" height="300px">';
+    pictures[4] = '<img src="vokzal.jpg" height="300px">';
 
-    //positions[4] = new google.maps.LatLng(55.0442, 13.9116);
-    //positions[5] = new google.maps.LatLng(57.1442, 12.9116);
-    //positions[6] = new google.maps.LatLng(58.2442, 10.9116);
-    //positions[7] = new google.maps.LatLng(59.3442, 10.9116);
-    //positions[8] = new google.maps.LatLng(56.4442, 10.9116);
-    //positions[9] = new google.maps.LatLng(55.5442, 13.9116);
+    title[0] = "square";
+    title[1] = "church";
+    title[2] = "nemiga";
+    title[3] = "arena";
+    title[4] = "vokzal";
 
-    for(var i=0; i<4; i++) {
+    for(var i=0; i<5; i++) {
         markers[i]= new google.maps.Marker({
             position: positions[i],
             map: map,
-            title: "title"+i
+            title: title[i]
         });
     }
-    var str1 = '<div id="content">'+
-        '<div id="siteNotice">'+
-            '<p>Some title</p>'+
-        '</div>'+
+    var str0 = '<div id="content">'+
+        '<div id="siteNotice">';
+    str1[0] = '<p>square</p>';
+    str1[1] = '<p>church</p>';
+    str1[2] = '<p>nemiga</p>';
+    str1[3] = '<p>arena</p>';
+    str1[4] = '<p>vokzal</p>';
+    var str12 = '</div>'+
         '<div id="bodyContent">';
     var str2 = '</div>'+ '</div>';
-    for(var i=0; i<4; i++) {
-        contentString[i] = str1 + pictures[i] + str2;
+    for(var i=0; i<5; i++) {
+        contentString[i] = str0 + str1[i] + str12 + pictures[i] + str2;
         infowindow[i] = new google.maps.InfoWindow({
             content: contentString[i]
         });
     }
 
-    for(var i=0; i<4; i++) {
+    for(var i=0; i<5; i++) {
         google.maps.event.addListener(markers[i], 'click', random1(i));
     }
     function random1(i) {
